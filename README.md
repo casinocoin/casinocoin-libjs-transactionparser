@@ -49,12 +49,12 @@ where `ORDERCHANGE` is a javascript object with the following format:
     direction: 'buy' | 'sell',
     quantity: {
         currency: CURRENCYSTRING,
-        counterparty: CASINOCOINADDRESS,  (omitted if currency is 'XRP')
+        counterparty: CASINOCOINADDRESS,  (omitted if currency is 'CSC')
         value: DECIMALSTRING
     },
     totalPrice: {
         currency: CURRENCYSTRING,
-        counterparty: CASINOCOINADDRESS,  (omitted if currency is 'XRP')
+        counterparty: CASINOCOINADDRESS,  (omitted if currency is 'CSC')
         value: DECIMALSTRING
     },
     makerExchangeRate: DECIMALSTRING,
@@ -68,7 +68,7 @@ where `ORDERCHANGE` is a javascript object with the following format:
 The keys in this object are the Casinocoin [addresses] whose orders have changed and the values are arrays of objects that represent the order changes.
 
 The `SEQUENCE` is the sequence number of the transaction that created that create the orderbook change.
-The `CURRENCYSTRING` is 'XRP' for XRP, a 3-letter ISO currency code, or a 160-bit hex string in the [Currency format].
+The `CURRENCYSTRING` is 'CSC' for CSC, a 3-letter ISO currency code, or a 160-bit hex string in the [Currency format].
 
 The `makerExchangeRate` field provides the original value of the ratio of what the taker pays over what the taker gets (also known as the "quality").
 

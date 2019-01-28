@@ -4,7 +4,7 @@ var BigNumber = require('bignumber.js');
 
 // drops is a bignumber.js BigNumber
 function dropsToCSC(drops) {
-  return drops.dividedBy(1000000);
+  return drops.dividedBy(100000000.0);
 }
 
 function normalizeNode(affectedNode) {
